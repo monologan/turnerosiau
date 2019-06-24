@@ -1,7 +1,6 @@
 <?php
 class AdminC
 {
-
     public function IngresoC()
     {
         if (isset($_POST["usuarioI"])) {
