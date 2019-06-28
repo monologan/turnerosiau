@@ -33,6 +33,7 @@ class TurnosC
             echo '<tr>
             <td>' . $value["turno"] . '</td>    
             <td>' . $value["usuario"] . '</td>                
+            
         </tr>';
         }
     }

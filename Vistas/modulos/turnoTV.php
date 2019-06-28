@@ -1,11 +1,11 @@
 <?php
-session_start();
+// session_start();
 
-if (!$_SESSION["ingreso"]) {
+// if (!$_SESSION["ingreso"]) {
 
-	header("location:index.php?ruta=ingreso");
-	exit();
-}
+// 	header("location:index.php?ruta=ingreso");
+// 	exit();
+// }
 ?>
 
 <br>
