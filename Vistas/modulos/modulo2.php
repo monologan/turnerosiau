@@ -6,7 +6,7 @@ session_start();
         header("location:index.php?ruta=ingreso");
 
     }else{
-        if($_SESSION['rol'] != 1){
+        if($_SESSION['rol'] != 2){
             header("location:index.php?ruta=ingreso");
 
         }
