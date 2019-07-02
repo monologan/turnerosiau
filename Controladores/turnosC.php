@@ -30,9 +30,9 @@ class TurnosC
         $respuesta = TurnosM::MostrarTurnosM($tablaBD, $tablaBD2);
 
         foreach ($respuesta as $key => $value) {
-            echo '<tr>
-            <td>' . $value["turno"] . '</td>    
-            <td>' . $value["usuario"] . '</td>                
+            echo '<tr id="blink">
+            <td >' . $value["turno"] . '</td>    
+            <td >' . $value["usuario"] . '</td>                
             
         </tr>';
         }
