@@ -18,7 +18,7 @@
 </head>
 
 <body>
-	<?php header("refresh: 100"); ?>
+	
 	<br>
 	<h1>Turnos</h1>
 	<table id="t1" border="1">
