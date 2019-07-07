@@ -24,15 +24,10 @@ session_start();
 
 </form>
 
-<td><a href="" target="_blank">
-		<a href="index.php?ruta=turnoTV" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" onclick="window.open(this.href, this.target, 'width=900,height=600');
-		return false;">TELEVISOR</a>
+
 
 		<?php
 		$registrar = new TurnosC();
-		$registrar->RegistrarTurnoC();
-
-
-		
+		$registrar->RegistrarTurnoC();		
 
 		?>

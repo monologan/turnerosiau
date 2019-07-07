@@ -5,46 +5,40 @@
 // 	exit();
 // }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
+<div class="container my-5 py-5 ">
+	<div class="row">
+		<div class="col-7 text-white">
+		
+		</div>
+		<div class="col-5  text-white text-center ">
 
+			<table id="t1" class="table table-dark table-bordered bg-info">
+				<thead>
+					<tr class="bg-danger">
+						<th scope="col"><h1 class="display-1">TURNO</h1></th>
+						<th scope="col"><h1 class="display-1">MODULO</h1></th>						
+					</tr>
+				</thead>
+				<tbody>
+				 <?php
+			       $mostrar = new TurnosC();
+			       $mostrar->MostrarTurnosC();
+				 ?>	
+				 </tbody>				
+			</table>
+			
+		</div>
+	</div>
+</div>
 
-</head>
-
-<body>
-	
-	<br>
-	<h1>Turnos</h1>
-	<table id="t1" border="1">
-		<thead>
-			<tr>
-				<th>Turno</th>
-				<th>Modulo</th>
-			</tr>
-		</thead>
-		<tbody>
-			<?php
-			$mostrar = new TurnosC();
-			$mostrar->MostrarTurnosC();
-			?>
-		</tbody>
-
-	</table>
-	<audio id="audio" controls style="display:none">
+<audio id="audio" controls style="display:none">
 		<source type="audio/mp3" src="audio.mp3">
 	</audio>
-	<script type="text/javascript">
-		
+	<script type="text/javascript">		
 		//audio
 		var audio = document.getElementById("audio");
-		audio.play();
-		
+		audio.play();		
 		//blink	
 		var color = "red";
 		function BlinkIt() {
@@ -59,10 +53,4 @@
 		}
 		var ads = setInterval(BlinkIt, 900);
 		setTimeout(parar, 15000);
-
 	</script>
-
-
-</body>
-
-</html>

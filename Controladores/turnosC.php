@@ -17,7 +17,7 @@ class TurnosC
 
                 header("location:index.php?ruta=modulo");
             } else {
-                echo "Turno en Atencion.  Por favor ingrese el siguiente";
+                echo "Turno en Atencion.";
             }
         }
     }
@@ -31,8 +31,8 @@ class TurnosC
 
         foreach ($respuesta as $key => $value) {
             echo '<tr id="blink">
-            <td >' . $value["turno"] . '</td>    
-            <td >' . $value["usuario"] . '</td>                
+            <td ><h1 class="display-2">' . $value["turno"] . '</h1></td>    
+            <td ><h1 class="display-2">' . $value["usuario"] . '</h1></td>                
             
         </tr>';
         }

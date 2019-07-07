@@ -1,43 +1,75 @@
 <?php
-
-
 session_start();
-    if(!isset($_SESSION['rol'])){
-        header("location:index.php?ruta=ingreso");
-
-    }else{
-        if($_SESSION['rol'] != 1){
-            header("location:index.php?ruta=ingreso");
-
-        }
-    }
-
-
-
+if (!isset($_SESSION['rol'])) {
+	header("location:index.php?ruta=ingreso");
+} else {
+	if ($_SESSION['rol'] != 1) {
+		header("location:index.php?ruta=ingreso");
+	}
+}
 ?>
+<div class="container pt-5 d-flex justify-content-center">
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header text-light d-flex justify-content-center text-center">
+					<H2>TURNO EN PC</H2>
+				</div>
+				<div class="card-body">
+					<h5 class="card-title text-danger">Ingrese el turno</h5>
+					<p class="card-text	">
+						<form method="post" action="">
+							<div class="form-group">
+								<input type="number" class="form-control" placeholder="Turno" name="turnoW" required MIN="1">
+								<small id="emailHelp" class="form-text text-muted">La lista de turnos es de 1 - 50.</small>
+							</div>
+							<div class="form-group">
+								<input type="hidden" class="form-control" placeholder="Modulo" name="moduloW" value="<?php echo $_SESSION['rol']; ?>" min="1" max="2" required>
+							</div>
+							<div class="d-flex" style="justify-content: flex-end;">
+								<p class="mr-auto text-white"><?php
+								$registrar = new TurnosC();
+								$registrar->RegistrarTurnoC(); ?>
+								</p>
+								<button type="submit" class="btn btn-danger">Registrar</button>
+							</div>
 
-<br>
-<h1>TURNOS SIAU 1</h1>
-
-<form method="post" action="">
-
-	<input type="number" placeholder="Turno" name="turnoW" required MIN="1">
-	<input type="hidden" placeholder="Modulo" name="moduloW" value="<?php echo $_SESSION['rol']; ?>"min="1" max="2" required>
-	<input type="submit" class="btn btn-primary" value="Registrar">
-
-</form>
+						</form>
 
 
-
-<td><a href="" target="_blank">
-	<a href="index.php?ruta=turnoTV" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" onclick="window.open(this.href, this.target, 'width=900,height=600');
-		return false;">TELEVISOR</a>
-
-		<?php
-		$registrar = new TurnosC();
-		$registrar->RegistrarTurnoC();
-
-
-		
-
-		?>
+					</p>
+				</div>
+				<div class="card-footer">
+					<!-- <a href="" target="_blank"> -->
+						<a href="index.php?ruta=turnoTV" class="btn btn-warning" role="button" aria-pressed="true" onclick="window.open(this.href, this.target, 'width=900,height=600'); return false;">TELEVISOR</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="card">
+				<div class="card-header text-white d-flex justify-content-center text-center">
+					<H2>TURNOS EN TV</H2>
+				</div>
+				<div class="card-body d-flex flex-wrap align-content-center justify-content-center">
+					<h5 class="card-title text-white text-center"></h5>
+					<p class="card-text">
+						<table id="t1" border="1">
+							<thead>
+								<tr>
+									<th>Turno</th>
+									<th>Modulo</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php
+								$mostrar = new TurnosC();
+								$mostrar->MostrarTurnosC();
+								?>
+							</tbody>
+							</table>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
