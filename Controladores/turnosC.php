@@ -31,10 +31,9 @@ class TurnosC
 
         foreach ($respuesta as $key => $value) {
             echo '<tr id="blink">
-            <td ><h1 class="display-2">' . $value["turno"] . '</h1></td>    
-            <td ><h1 class="display-2">' . $value["usuario"] . '</h1></td>                
-            
-        </tr>';
-        }
+            <td ><h1 class="display-5">' . $value["turno"] . '</h1></td>    
+            <td ><h1 class="display-5">' . $value["usuario"] . '</h1></td>                
+        </tr>';        
+    }    
     }
 }

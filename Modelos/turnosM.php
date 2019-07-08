@@ -23,7 +23,7 @@ class TurnosM extends ConexionBD
     {
         $pdo = ConexionBD::cBD()->prepare("SELECT turnos.turno, administradores.usuario FROM $tablaBD
                                             inner join $tablaBD2 on administradores.id=turnos.modulo 
-                                            ORDER BY turno DESC LIMIT 5 ");
+                                            ORDER BY turno DESC LIMIT 2 ");
 
         $pdo->execute();
         return $pdo->fetchAll();
