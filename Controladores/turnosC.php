@@ -13,9 +13,10 @@ class TurnosC
 
             $resultado = TurnosM::RegistrarTurnoM($datosC, $tablaBD);
 
-            if ($resultado == "bien") {
-
+            if ($resultado == "bien") {                
                 header("location:index.php?ruta=modulo");
+                
+                
             } else {
                 echo "Turno en Atencion.";
             }
@@ -33,7 +34,8 @@ class TurnosC
             echo '<tr id="blink">
             <td ><h1 class="display-5">' . $value["turno"] . '</h1></td>    
             <td ><h1 class="display-5">' . $value["usuario"] . '</h1></td>                
-        </tr>';        
-    }    
+        </tr>';
+        }
+        
     }
 }

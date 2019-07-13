@@ -9,6 +9,8 @@ if (!isset($_SESSION['rol'])) {
 }
 ?>
 
+
+
 <div class="container pt-5 d-flex justify-content-center">
 	<div class="row">
 		<div class="col-sm-6 ">
@@ -19,7 +21,7 @@ if (!isset($_SESSION['rol'])) {
 				<div class="card-body">
 					<h5 class="card-title text-danger">Ingrese el turno</h5>
 					<p class="card-text	">
-						<form method="post" action="" id="form1" runat="server">
+						<form method="post" action="" >
 							<div class="form-group">
 								<input type="number" class="form-control" placeholder="Turno" name="turnoW" required MIN="1">
 								<small id="emailHelp" class="form-text text-muted">La lista de turnos es de 1 - 50.</small>
@@ -32,18 +34,24 @@ if (!isset($_SESSION['rol'])) {
 																$registrar = new TurnosC();
 																$registrar->RegistrarTurnoC(); ?>
 								</p>
-								<button href="index.php?ruta=turnoTV" onclick="window.opener.location.reload(this.href);"  type="submit" class="btn btn-danger">Registrar</button>
-								
-							</div>
-							
-						</form>
+								<button type="submit" class="btn btn-danger">Registrar</button>
 
+
+
+							</div>
+
+						</form>
+						
 
 					</p>
 				</div>
 				<div class="card-footer">
-					<!-- <a href="" target="_blank"> -->
-					<a href="index.php?ruta=turnoTV" class="btn btn-warning" role="button" aria-pressed="true" onclick="window.open(this.href, this.target, 'width=900,height=600'); return false;">TELEVISOR</a>
+
+					<input type='button' id='btnOpen' value='Open Child'>
+					<input type='button' id='btnClose' value='Close Child'>
+					<input type='button' id='btnRefresh' value='Refresh Child'>
+
+
 				</div>
 			</div>
 		</div>
@@ -81,3 +89,46 @@ if (!isset($_SESSION['rol'])) {
 		</div>
 	</div>
 </div>
+
+<script>
+  
+
+(function() {
+  var childWindow;
+
+  document.getElementById('btnOpen').onclick = openChildWindow;
+  document.getElementById('btnClose').onclick = closeChildWindow;
+  document.getElementById('btnRefresh').onclick = refreshChildWindow;
+
+  function openChildWindow() {
+    if (childWindow) {
+      alert("We already have one open.");
+    }
+    else {
+      childWindow = window.open("index.php?ruta=turnoTV");
+    }
+  }
+
+  function closeChildWindow() {
+    if (!childWindow) {
+      alert("There is no child window open.");
+    }
+    else {
+      childWindow.close();
+      childWindow = undefined;
+    }
+  }
+
+  function refreshChildWindow() {
+    if (!childWindow) {
+		alert("There is no child window open.");
+		
+    }
+    else {
+		
+		childWindow.location.reload();
+    }
+  }
+})();
+
+</script>
