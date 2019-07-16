@@ -14,8 +14,7 @@ class TurnosC
             $resultado = TurnosM::RegistrarTurnoM($datosC, $tablaBD);
 
             if ($resultado == "bien") {                
-                header("location:index.php?ruta=modulo");
-                
+                header("location:index.php?ruta=modulo");           
                 
             } else {
                 echo "Turno en Atencion.";

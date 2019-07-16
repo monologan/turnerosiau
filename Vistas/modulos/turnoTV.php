@@ -5,7 +5,6 @@
 // 	exit();
 // }
 ?>
-
 <div class="container my-5 py-5 border">
 	<div class="row border">
 		<div class="col-7 text-white border py-3">
@@ -14,10 +13,10 @@
 			</div>
 		</div>
 		<div class="col-5  text-white text-center border ">
-			<table id="t1" class="table table-dark table-bordered bg-info mt-3">
+			<table id="tableHolder"  class="table table-dark table-bordered bg-info mt-3">
 				<thead>
 					<tr class="bg-danger">
-						<th scope="col">
+						<th  scope="col">
 							<h1 class="display-5">TURNO</h1>
 						</th>
 						<th scope="col">
@@ -26,10 +25,12 @@
 					</tr>
 				</thead>
 				<tbody>
+
+
 					<?php
 					$mostrar = new TurnosC();
 					$mostrar->MostrarTurnosC();
-					
+
 					?>
 				</tbody>
 			</table>
@@ -63,5 +64,5 @@
 	setTimeout(parar, 15000);
 
 	
+    
 </script>
-
