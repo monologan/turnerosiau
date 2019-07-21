@@ -6,8 +6,11 @@
 // }
 //header("Refresh: 2");
 ?>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee
 <div class="container my-5 py-5 border">
 	<div class="row border">
 		<div class="col-7 text-white border py-3">
@@ -16,11 +19,15 @@
 			</div>
 		</div>
 		<div class="col-5  text-white text-center border ">
+<<<<<<< HEAD
 
 			<table class="table table-dark table-bordered bg-info mt-3">
+=======
+			<table id="tableHolder"  class="table table-dark table-bordered bg-info mt-3">
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee
 				<thead>
 					<tr class="bg-danger">
-						<th scope="col">
+						<th  scope="col">
 							<h1 class="display-5">TURNO</h1>
 						</th>
 						<th scope="col">
@@ -29,6 +36,8 @@
 					</tr>
 				</thead>
 				<tbody>
+
+
 					<?php
 					$mostrar = new TurnosC();
 					$mostrar->MostrarTurnosC();
@@ -37,19 +46,25 @@
 
 				</tbody>
 			</table>
-
 		</div>
 	</div>
 </div>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee
 <audio id="audio" controls style="display:none">
 	<source type="audio/mp3" src="audio.mp3">
 </audio>
 
+<<<<<<< HEAD
 <script  type="text/javascript">
 
+=======
+<script type="text/javascript">
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee
 	//audio
 	var audio = document.getElementById("audio");
 	audio.play();
@@ -69,8 +84,15 @@
 	}
 	var ads = setInterval(BlinkIt, 900);
 	setTimeout(parar, 15000);
+<<<<<<< HEAD
 
 	
     
 </script>
 
+=======
+
+	
+    
+</script>
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee

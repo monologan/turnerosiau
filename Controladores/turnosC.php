@@ -13,8 +13,14 @@ class TurnosC
 
             $resultado = TurnosM::RegistrarTurnoM($datosC, $tablaBD);
 
+<<<<<<< HEAD
             if ($resultado == "bien") {
                 header("location:index.php?ruta=modulo");    
+=======
+            if ($resultado == "bien") {                
+                header("location:index.php?ruta=modulo");           
+                
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee
             } else {
                 echo "Turno en Atencion.";
             }
@@ -35,7 +41,11 @@ class TurnosC
             <td ><h1 class="display-5">' . $value["usuario"] . '</h1></td>                
         </tr>';
         }
+<<<<<<< HEAD
       
+=======
+        
+>>>>>>> b5be3e5b13928f07388c6a9520313438cb3fefee
     }
 }
 ?>

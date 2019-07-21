@@ -9,7 +9,7 @@ class TurnosM extends ConexionBD
         $pdo = ConexionBD::cBD()->prepare("INSERT INTO $tablaBD (turno, modulo) VALUES(:turno, :modulo)");
         $pdo->bindParam(":turno", $datosC["turno"], PDO::PARAM_INT);
         $pdo->bindParam(":modulo", $datosC["modulo"], PDO::PARAM_INT);
-
+        
 
         if ($pdo->execute()) {
             return "bien";
