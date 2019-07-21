@@ -14,7 +14,8 @@ class TurnosM extends ConexionBD
         if ($pdo->execute()) {
             return "bien";
         } else {
-            return "Error";        }
+            return "Error";  
+             }
 
         $pdo->close();
     }
@@ -27,6 +28,8 @@ class TurnosM extends ConexionBD
 
         $pdo->execute();
         return $pdo->fetchAll();
+        
         $pdo->close();
     }    
 }
+?>
