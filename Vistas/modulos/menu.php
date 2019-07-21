@@ -12,6 +12,7 @@
 				<li class="nav-item"><a href="index.php?ruta=ingreso" class="nav-link">Inicio</a></li>
 				<li class="nav-item"><a href="index.php?ruta=modulo" class="nav-link">Modulo</a></li>
 				<li class="nav-item"><a href="index.php?ruta=salir" class="nav-link">Salir</a></li>
+				
 			</ul>
 		</div>
 	</div>
