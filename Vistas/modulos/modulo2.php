@@ -8,16 +8,7 @@ if (!isset($_SESSION['rol'])) {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
 
 <body>
     <div class="container pt-5 d-flex justify-content-center">
@@ -58,8 +49,7 @@ if (!isset($_SESSION['rol'])) {
                     <div class="card-footer">
                         <div class="container">
                             <div class="row d-flex justify-content-between">
-                                <a onclick="openNewTab()" class="text-white">app2</a>
-                                <a onclick="refreshExistingTab()" class="text-white">Refresh</a>
+                                
 
                             </div>
                         </div>
@@ -98,18 +88,4 @@ if (!isset($_SESSION['rol'])) {
             </div>
         </div>
     </div>
-    <script>
-        var childWindow = "";
-        var newTabUrl = "http://localhost/mvc/index.php?ruta=turnoTV";
-
-        function openNewTab() {
-            childWindow = window.open(newTabUrl);
-        }
-
-        function refreshExistingTab() {
-            childWindow.location.href = newTabUrl;
-        }
-    </script>
-</body>
-
-</html>
+    
